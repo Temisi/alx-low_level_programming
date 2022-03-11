@@ -1,1 +1,1 @@
-My first encounter with C programming
+ My first C programming attempt
