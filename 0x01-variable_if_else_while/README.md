@@ -1,1 +1,0 @@
-C conditional variables task
