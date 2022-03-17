@@ -14,16 +14,15 @@ void print_numbers(void)
 	/* assign initial value from where we want to print the numbers */
 	i = 0;
 
-	/*print statement*/
-	_putchar("Numbers from 0 to 9: \n");
-
 	/* while loop, that will print numbers from 0 to 9 */
 	while (i <= 9)
 	{
 		/*printing the numbers */
-		_putchar("%d", i);
+		_putchar("%d\n", i);
 		/* increment */
 		i++;
 	}
+	_putchar("\n");
+
 	return (0);
 }
