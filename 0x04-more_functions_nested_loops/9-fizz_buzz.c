@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "mian.h"
 
 /**
  * main - prints all the numbers from 1 to 100, followed
