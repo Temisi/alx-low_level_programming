@@ -2,14 +2,16 @@
 #include <math.h>
 
 /**
- * main - prints the largest prime factor of a given number
+ * getMaxPrimeFactor - prints the largest prime factor of a given number
  * followed by a new line.
+ * @n: factor number
  *
  * Return: Always 0.
  */
 int getMaxPrimeFactor(int n)
 {
 	int i, max = -1;
+
 	n = 612852475143;
 
 	while (n % 2 == 0)
@@ -19,7 +21,7 @@ int getMaxPrimeFactor(int n)
 	}
 
 	for (i = 3; i <= sqrt(n); i = i + 2)
-	{ 
+	{
 		/* i will increase by 2, to get only odd numbers */
 		while (n % i == 0)
 		{
