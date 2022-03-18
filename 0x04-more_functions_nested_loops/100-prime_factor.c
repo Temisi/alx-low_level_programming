@@ -12,8 +12,6 @@ int getMaxPrimeFactor(int n)
 {
 	int i, max = -1;
 
-	n = 612852475143;
-
 	while (n % 2 == 0)
 	{
 		max = 2;
