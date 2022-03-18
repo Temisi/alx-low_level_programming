@@ -2,15 +2,19 @@
 #include <math.h>
 
 /**
- * getMaxPrimeFactor - prints the largest prime factor of a given number
+ * main - prints the largest prime factor of a given number
  * followed by a new line.
- * @n: factor number
  *
  * Return: Always 0.
  */
-int getMaxPrimeFactor(int n)
+int main(void)
 {
-	int i, max = -1;
+	long int n;
+	long int max;
+	long int i;
+
+	n = 612852475143;
+	max = -1;
 
 	while (n % 2 == 0)
 	{
