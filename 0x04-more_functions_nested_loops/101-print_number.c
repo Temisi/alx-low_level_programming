@@ -14,7 +14,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar(45);
-		m = n * -1;
+		m = -n;
 	}
 	else
 	{
@@ -24,7 +24,7 @@ void print_number(int n)
 	d = m;
 	count = 1;
 
-	while (d > 9)
+	while (d > 10)
 	{
 		d /= 10;
 		count *= 10;
