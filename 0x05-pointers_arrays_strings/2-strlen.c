@@ -10,12 +10,10 @@
 
 int _strlen(char *s)
 {
-	char s[] = "Programming is fun";
-	int i;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; ++i)
-	{
-		_putchar("Length of the string: %d", i);
-	}
-	return (0);
+	while (*(s + i) != '\0')
+		i++;
+
+	return (i);
 }
