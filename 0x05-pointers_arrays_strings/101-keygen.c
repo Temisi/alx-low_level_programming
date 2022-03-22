@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
 
 /**
  * main - generates keygen.
@@ -11,34 +10,14 @@
 
 int main(void)
 {
-	char a[10], c[10], d;
-	int i, j, k = 0;
+	srand((unsigned int)(time(NULL)));
 
-	printf("Keygen by Fehintola\n\n");
+	int index = 0;
 
-	while (k < 5 || k >= 10)
+	char characters[] = "abcdefghijklmnopqrstuvwxyz0123456789/,.-+=~`<>:";
+
+	for (index = 0; index < 12; index++)
 	{
-		if (k != 0)
-			printf("\n The username lenght should be 5 to 10 alphabets\n");
-
-		printf("enter username: ");
-		scanf("%s", a);
-		k = strlen(a);
+		printf("%c", characters[rand() % (sizeof(characters - 1))]);
 	}
-
-	i = k - 1;
-	j = 0;
-
-	while (i >= 0)
-	{
-		c[j] = a[i] + i;
-		i--;
-		j++;
-	}
-
-	c[j] = 0;
-	printf("\nThe password is %s\n", c);
-	printf("\nHit enter to exit\n");
-	getchar();
-	getchar();
 }
