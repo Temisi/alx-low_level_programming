@@ -25,7 +25,7 @@ int _atoi(char *s)
 
 	while (s[i] >= 48 && s[i] <= 57)
 	{
-		if (b > INT_MAX / 10 || (b == INT_MAX / 10 && s[i] - 48 > 55))
+		if (b > INT_MAX / 10 || (b == INT_MAX / 10 && s[i] - 48 > 7))
 		{
 			if (c == 1)
 				return (INT_MAX);
