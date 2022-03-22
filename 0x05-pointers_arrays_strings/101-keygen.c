@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 /**
  * main - generates keygen.
@@ -10,7 +11,7 @@
 
 int main(void)
 {
-	char a[10], c[10]l d;
+	char a[10], c[10], d;
 	int i, j, k = 0;
 
 	printf("Keygen by Fehintola\n\n");
