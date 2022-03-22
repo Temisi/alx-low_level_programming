@@ -11,29 +11,23 @@
 
 int _atoi(char *s)
 {
-	int c = 1, b = 0, i = 0;
+	int i, c;
+	unsigned int b;
 
-	while (s[i] == ' ')
-	{
-		i++;
-	}
+	c = 1;
+	b = 0;
 
-	if (s[i] == 45 || s[i] == 43)
+	for (i = 0; s[i] != 0; i++)
 	{
-		c = 1 - 2 * (s[i++] == 45);
-	}
-
-	while (s[i] >= 48 && s[i] <= 57)
-	{
-		if (b > INT_MAX / 10 ||
-		(b == INT_MAX / 10 && s[i] - 48 > 7))
+		if (s[i] >= 48 && s[i] <= 57)
 		{
-			if (c == 1)
-				return (INT_MAX);
-			else
-				return (INT_MIN);
+			b *= 10;
+			b += s[i] - 48;
 		}
-		b = 10 * b + (s[i++] - 48);
+		else if (b)
+			break;
+		else if (s[i] == 45)
+			c *= -1;
 	}
 	return (b * c);
 }
