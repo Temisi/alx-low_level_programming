@@ -13,9 +13,7 @@ int password(int m)
 {
 	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHKLZXCVBNM";
 
-	i = 0
-
-	printf("\t");
+	i = 0;
 
 	srand(time(NULL));
 
