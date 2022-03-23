@@ -3,27 +3,43 @@
 #include <stdlib.h>
 
 /**
- * password - generates keygen.
- * @m: length of password
+ * main - generates keygen.
  *
  * Return: 0
  */
 
-int password(int m)
+int main(void)
 {
-	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHKLZXCVBNM";
+	int i, password, len;
 
-	i = 0;
+	srand((unsigned int)time(NULL));
 
-	srand(time(NULL));
+	printf("Enter password length and must be greater than 8\n");
 
-	for (int i = 0; i < m; i++)
+	scanf("%d", &len);
+
+	if (len >= 8)
 	{
-		printf("%c", list[rand() % (sizeof(list - 1))]);
+		for (i = 0; i < len; i++)
+		{
+			int k = rand() % 128;
+
+			if ((k >= 48 && k <= 57) || (k >= 65 && k <= 90)
+					|| (k >= 97 && k <= 122)
+					|| (k >= 35 && k <= 37) || k == 64)
+			{
+				printf("%c", k);
+			}
+			else
+			{
+				i--;
+			}
+		}
+		printf("\n");
 	}
-
-	printf("\n");
-	printf("\t");
-
+	else
+	{
+		printf("Length should be grater than 8\n");
+	}
 	return (0);
 }
