@@ -30,12 +30,7 @@ int main(void)
 			{
 				printf("%i\n", k);
 			}
-			else
-			{
-				i--;
-			}
 		}
-		printf("\n");
 	}
 	else
 	{
