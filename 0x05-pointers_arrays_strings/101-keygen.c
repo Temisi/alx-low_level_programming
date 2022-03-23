@@ -28,7 +28,7 @@ int main(void)
 					|| (k >= 97 && k <= 122)
 					|| (k >= 35 && k <= 37) || k == 64)
 			{
-				printf("%c", k);
+				printf("%c\n", k);
 			}
 			else
 			{
