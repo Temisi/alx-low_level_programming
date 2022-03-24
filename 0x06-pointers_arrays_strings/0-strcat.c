@@ -22,13 +22,14 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 
-	while (src[g] != '\0')
+	while (g >= 0)
 	{
 		dest[m] = src[g];
+		if (src[g] == '\0')
+			break;
 		g++;
 		m++;
 	}
 
-	dest[m] = '\0';
 	return (dest);
 }
