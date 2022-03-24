@@ -2,20 +2,16 @@
 #include "main.h"
 
 /**
- * *_strcat - source code to concartenate two strings.
- * @dest: parameter pointer of char
- * @src: parameter pointer of char
+ * _strcat - concartenate two strings.
+ * @dest: destination parameter
+ * @src: source parameter
  *
- * Return: return value of dest.
+ * Return: pointer to  dest.
  */
 
 char *_strcat(char *dest, char *src)
 {
-	int m;
-	int g;
-
-	m = 0;
-	g = 0;
+	int m = 0, g = 0;
 
 	while (dest[m] != '\0')
 	{
@@ -27,8 +23,8 @@ char *_strcat(char *dest, char *src)
 		dest[m] = src[g];
 		if (src[g] == '\0')
 			break;
-		g++;
 		m++;
+		g++;
 	}
 
 	return (dest);
