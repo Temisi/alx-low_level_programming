@@ -17,21 +17,13 @@ char *cap_string(char *s)
 	{
 		if (s[0] >= 97 && s[0] <= 122)
 			s[0] = s[0] - 32;
-		i++;
 
-		while (s[0] != '\0')
-		{
-			for (i = 0; i < 13; i++)
-			{
-				if (s[0] == punctuation[i])
+				for (j = 0; punctuation[j] != '\0'; j++)
 				{
-					if ((s[j] >= 97) && s[j] <= 122)
+					if (s[i] == punctuation[j] &&
+						s[j] >= 97 && s[j] <= 122)
 						s[j] = s[j] - 32;
-					break;
 				}
-			}
-			i++;
-		}
 	}
 	return (s);
 }
