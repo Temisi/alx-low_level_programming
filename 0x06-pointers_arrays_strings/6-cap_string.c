@@ -10,20 +10,25 @@
 
 char *cap_string(char *s)
 {
-	int i, j;
-	char punctuation[] = "\t\n,;.!?\"(){}";
+	int i = 0, j;
+	char punc[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	for (i = 0; s[i] != '\0'; i++)
+	if (s[i] >= 97 && s[i] <= 122)
+		s[i] = s[i] - 32;
+	i++;
+
+	while (s[i] != '\0')
 	{
-		if (s[0] >= 97 && s[0] <= 122)
-			s[0] = s[0] - 32;
-
-				for (j = 0; punctuation[j] != '\0'; j++)
-				{
-					if (s[i] == punctuation[j] &&
-						s[j] >= 97 && s[j] <= 122)
-						s[j] = s[j] - 32;
-				}
+		for (i = 0; i < 13; i++)
+		{
+			if (s[i] == punc[i])
+			{
+				if (s[j] >= 97 && s[j] <= 122)
+					s[j] = s[j] - 32;
+				break;
+			}
+		}
+		i++;
 	}
 	return (s);
 }
