@@ -19,12 +19,12 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0')
 	{
-		for (i = 0; i < 13; i++)
+		for (j = 0; j < 13; j++)
 		{
-			if (s[i] == punc[i])
+			if (s[i] == punc[j])
 			{
-				if (s[j] >= 97 && s[j] <= 122)
-					s[j] = s[j] - 32;
+				if (s[i + 1] >= 97 && s[i + 1] <= 122)
+					s[i + 1] = s[i + 1] - 32;
 				break;
 			}
 		}
