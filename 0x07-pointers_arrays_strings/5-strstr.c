@@ -33,7 +33,7 @@ char *_strstr(char *haystack, char *needle)
 			b++;
 		}
 		/* Condition to check substring not equaling a null byte*/
-		if (*b == '\0')
+		if (!*b)
 			return (a);
 		haystack = a + 1; /*entire string increment*/
 	}
