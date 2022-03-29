@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 	char *b;
 
 	/* Set condition for the string haystack*/
-	while (haystack[] != '\0')
+	while (*haystack != '\0')
 	{
 		/*string values*/
 		a = haystack;
@@ -27,7 +27,7 @@ char *_strstr(char *haystack, char *needle)
 
 		/*Condition to compare/search for occurence of substring*/
 		 /* needle in the entire string haystack*/
-		while (haystack[] != '\0' && *b != '\0' && haystack[] == *b)
+		while (*haystack != '\0' && *b != '\0' && *haystack == *b)
 		{
 			haystack++;
 			b++;
