@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 {
 	int m, j, sum = 0;
 
-	m = 0;
+	m = 1;
 
 	while (m < argc)
 	{
