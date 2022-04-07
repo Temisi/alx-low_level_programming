@@ -38,7 +38,7 @@ char *str_concat(char *s1, char *s2)
 
 	g = j;
 	for (j = 0; j <= g; m++, j++)
-		strout[k] = s2[j];
+		strout[m] = s2[j];
 
 	return (strout);
 }
