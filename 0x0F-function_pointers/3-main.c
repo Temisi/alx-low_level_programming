@@ -6,7 +6,7 @@
  * main - Entry point
  * Description: Program that performs simple operations
  * @argc: count argument
- * @arcv: vector argument
+ * @argv: vector argument
  *
  * Return: 0
  */
@@ -22,7 +22,8 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	if (get_op_func(argv[2]) == NULL)
+	operation = get_op_func(argv[2]);
+	if (argv[2][1] != '\0' || operation == NULL)
 	{
 		puts("Error");
 		exit(99);
@@ -34,7 +35,8 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	operation = get_op_func(argv[2]);
+
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
