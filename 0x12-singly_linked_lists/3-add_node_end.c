@@ -17,10 +17,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new = (list_t *)malloc(sizeof(list_t));
 
 	if (new == NULL)
-	{
-		printf("Error! Memory was not allocated!");
-		exit(-1);
-	}
+		return (NULL);
 
 	new->str = strdup(str);
 
@@ -41,4 +38,4 @@ list_t *add_node_end(list_t **head, const char *str)
 		temp->next = new;
 	}
 	return (*head);
-i}
+}
