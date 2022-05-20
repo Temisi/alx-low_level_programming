@@ -10,7 +10,7 @@
 
 int pop_listint(listint_t **head)
 {
-	int hnodes;
+	int hnode;
 	listint_t *h;
 	listint *purr;
 
@@ -19,7 +19,7 @@ int pop_listint(listint_t **head)
 
 	purr = *head;
 
-	hnodes = purr->n;
+	hnode = purr->n;
 
 	h = purr->next;
 
@@ -27,5 +27,5 @@ int pop_listint(listint_t **head)
 
 	*head = h;
 
-	return (hnodes);
+	return (hnode);
 }
